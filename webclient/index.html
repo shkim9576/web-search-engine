@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="js/query.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<br>
+
+<!-- Query Form -->
+<form id="queryForm">
+    <input type="radio" id="lucene-algorithm" name="algorithm" value="lucene" checked> Lucene<br>
+    <input type="radio" id="pagerank-algorithm" name="algorithm" value="pagerank"> PageRank<br><br>
+    <label>Search:</label>
+
+    <input type="text" id="searchTextBox" name="search" autocomplete="off" list="suggestionList" size="35">
+    <datalist id="suggestionList"></datalist>
+
+    <button id="submitQueryBtn">submit query</button>
+</form>
+
+<!-- Result -->
+<div id="resultContainer">
+    </br>
+    <label id="spellCorrectionLabel" for="spellCorrection">Search instead for</label>
+    <div id="spellCorrection"></div>
+    </br>
+    <div id="resultLabel"></div>
+    <div id="result"></div>
+</div>
+
+</body>
+</html>
